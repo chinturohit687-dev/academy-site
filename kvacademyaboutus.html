@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Get to know KV ACADEMY, offering online and offline B.Tech, MCA and BCA tuition support for engineering students.">
+<title>About Us | KV ACADEMY</title>
+<style>
+:root{
+  --navy:#082f63;--blue:#0d55a4;--yellow:#ffbd19;--ink:#142f52;
+  --muted:#5a6d84;--pale:#edf5ff;--line:#dce7f5;--green:#168354;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(6,39,81,.98);color:#fff;box-shadow:0 5px 22px #06264d20}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;line-height:1.15;font-size:1.22rem}
+.brand-mark{width:45px;height:45px;background:var(--yellow);color:var(--navy);display:grid;place-items:center;border-radius:14px;font-size:1.55rem}
+.brand small{display:block;font-weight:500;font-size:.68rem;color:#d7e7ff;letter-spacing:.4px;margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:.92rem;font-weight:700}
+.nav-links a:hover{color:var(--yellow)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 19px;font-weight:850;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 9px 20px #082f6320}
+.btn-yellow{background:var(--yellow);color:var(--navy)}
+.btn-white{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.menu-toggle{display:none;background:transparent;color:white;border:1px solid #ffffff55;border-radius:9px;padding:8px 11px;font-size:1.15rem}
+.hero{background:linear-gradient(120deg,#f6faff,#e2efff);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-100px;top:-120px;width:420px;height:420px;border-radius:50%;background:#0d55a40b}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;padding:78px 0 72px}
+.eyebrow{display:inline-block;padding:7px 13px;border-radius:100px;background:#ffbd1930;color:#765000;border:1px solid #ffbd1970;font-size:.78rem;font-weight:900;letter-spacing:1.3px}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2.6rem,5.4vw,4.45rem);line-height:1.04;letter-spacing:-2px;color:var(--navy);margin:19px 0}
+h1 em{font-style:normal;color:#e6a000}
+.hero-copy>p{font-size:1.08rem;color:#49617d;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-panel{background:linear-gradient(145deg,#0a4b91,#082955);color:#fff;border-radius:28px;padding:30px;min-height:350px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;box-shadow:0 22px 50px #07336b24}
+.hero-panel:before,.hero-panel:after{content:"";position:absolute;border-radius:50%;background:#ffffff0c}
+.hero-panel:before{width:260px;height:260px;right:-80px;top:-70px}
+.hero-panel:after{width:170px;height:170px;left:-50px;bottom:-65px}
+.hero-cap{position:relative;z-index:1;text-align:center;font-size:6.3rem;line-height:1.3}
+.hero-note{position:relative;z-index:1;background:#fff;color:var(--navy);border-radius:16px;padding:19px 21px;margin-top:6px}
+.hero-note strong{font-size:1.12rem;display:block}
+.hero-note p{margin:5px 0 0;color:var(--muted);font-size:.9rem}
+.section{padding:75px 0}
+.section-head{max-width:720px;text-align:center;margin:0 auto 36px}
+.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:#a87500;font-weight:900}
+.section-head h2{font-size:clamp(1.9rem,3.5vw,2.75rem);line-height:1.17;letter-spacing:-.8px;color:var(--navy);margin:9px 0 12px}
+.section-head p{color:var(--muted);margin:0}
+.story-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+.story-copy h2{font-size:clamp(1.85rem,3.4vw,2.55rem);line-height:1.2;color:var(--navy);margin:14px 0}
+.story-copy p{color:var(--muted)}
+.story-card{background:#f2f7ff;border:1px solid var(--line);padding:30px;border-radius:23px}
+.story-card .big-icon{width:70px;height:70px;display:grid;place-items:center;background:var(--yellow);border-radius:20px;font-size:2rem;margin-bottom:18px}
+.story-card h3{color:var(--navy);font-size:1.4rem;margin-bottom:10px}
+.story-card p{color:var(--muted);margin-bottom:0}
+.values{background:#f6f9fe}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.value-card{background:white;border:1px solid #e2ebf6;border-radius:19px;padding:26px}
+.value-icon{width:55px;height:55px;display:grid;place-items:center;background:#eaf3ff;border-radius:16px;font-size:1.6rem;margin-bottom:16px}
+.value-card h3{color:var(--navy);margin-bottom:8px;font-size:1.14rem}
+.value-card p{color:var(--muted);font-size:.94rem;margin:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{padding:21px 18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.step-number{width:36px;height:36px;border-radius:12px;background:var(--yellow);color:var(--navy);display:grid;place-items:center;font-weight:900;margin-bottom:14px}
+.step h3{color:var(--navy);font-size:1.03rem;margin-bottom:7px}
+.step p{font-size:.89rem;color:var(--muted);margin:0}
+.learning{background:#f6f9fe}
+.learning-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.learning-card{padding:30px;border-radius:23px;background:#eaf4ff;border:1px solid #dcecff}
+.learning-card.offline{background:#fff6e2;border-color:#ffebba}
+.learning-card h3{color:var(--navy);font-size:1.55rem;margin-bottom:8px}
+.learning-card p{color:var(--muted)}
+.learning-card ul{list-style:none;padding:0;margin:15px 0 23px;display:grid;gap:8px}
+.learning-card li:before{content:"✓";color:var(--green);font-weight:900;margin-right:9px}
+.subject-list{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.subject-list span{padding:10px 15px;border-radius:100px;border:1px solid var(--line);background:#f8fbff;color:var(--navy);font-weight:750;font-size:.9rem}
+.cta{padding:0 0 75px}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:34px 38px;border-radius:24px;background:linear-gradient(110deg,#082f63,#0d55a4);color:white}
+.cta-inner h2{font-size:clamp(1.6rem,3.4vw,2.15rem);line-height:1.2;margin-bottom:7px}
+.cta-inner p{color:#d7e7ff;margin:0}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+.contact-card{border:1px solid var(--line);border-radius:20px;padding:25px;background:#fff}
+.contact-card h3{color:var(--navy);margin-bottom:17px}
+.contact-item{display:flex;gap:12px;align-items:flex-start;margin:16px 0}
+.contact-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#eaf3ff;flex:0 0 40px}
+.contact-item strong{display:block;color:var(--navy);font-size:.92rem}
+.contact-item small,.contact-item a{color:var(--muted);font-size:.87rem;overflow-wrap:anywhere}
+.contact-item a:hover{color:var(--blue);text-decoration:underline}
+.map-link{display:inline-block;color:var(--blue);font-weight:800;margin-top:4px;font-size:.88rem}
+footer{background:#06264d;color:#eaf2ff;padding:31px 0 18px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:22px}
+.footer-top p{margin:8px 0 0;color:#bbcee5;font-size:.9rem}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem}
+.footer-links a:hover{color:var(--yellow)}
+.copyright{border-top:1px solid #ffffff24;padding-top:16px;color:#a9bfd9;font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:850px){.hero-grid{gap:25px}.steps{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){
+  .nav{min-height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#06264d;padding:18px 5%;flex-direction:column;align-items:flex-start;gap:16px}.nav-links.open{display:flex}.nav-cta{display:none}
+  .hero-grid,.story-grid,.learning-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:50px 0}.hero-panel{min-height:280px}.hero-cap{font-size:5.2rem}
+  .section{padding:57px 0}.value-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.cta-inner{align-items:flex-start;flex-direction:column;padding:28px}.footer-top{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:420px){h1{letter-spacing:-1.2px}.steps{grid-template-columns:1fr}.actions .btn{width:100%}.hero-panel{padding:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="KV Academy About Us home">
+      <span class="brand-mark">🎓</span>
+      <span>KV ACADEMY<small>Learn Today · Build Tomorrow</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Page navigation">
+      <a href="#story" onclick="closeMenu()">Our Story</a>
+      <a href="#values" onclick="closeMenu()">Our Values</a>
+    </nav>
+    <a class="btn btn-yellow nav-cta" href="#values">Our Values ↗</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">GET TO KNOW KV ACADEMY</span>
+        <h1>Helping engineering students learn with <em>confidence.</em></h1>
+        <p>KV ACADEMY offers B.Tech, MCA and BCA tuition support through online and offline classes. Our aim is to make challenging concepts easier to approach through clear explanations, guided practice, and a supportive learning environment.</p>
+        <div class="actions">
+          <a class="btn btn-yellow" href="#values">Our Mission & Values ↓</a>
+          <a class="btn btn-white" href="#story">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Academy learning message">
+        <div class="hero-cap" aria-hidden="true">🎓</div>
+        <div class="hero-note"><strong>Learn today. Build tomorrow.</strong><p>Understand concepts. Practice step by step. Keep progressing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="story">
+    <div class="container story-grid">
+      <div class="story-copy">
+        <span class="kicker">Our Story</span>
+        <h2>A learning space for your B.Tech, MCA and BCA journey.</h2>
+        <p><strong>KV ACADEMY</strong> is a B.Tech, MCA and BCA tuition academy for engineering students who want extra guidance with their subjects. We understand that technical topics can sometimes feel difficult, especially when several concepts build on one another.</p>
+        <p>Our learning approach emphasizes clear explanations, asking questions, solving problems, and revisiting important ideas. Students can enquire about online or offline tuition based on their preferences and subject requirements.</p>
+        <p>Our goal is to help learners strengthen their fundamentals, become more confident with their coursework, and develop steady study habits throughout their engineering studies.</p>
+      </div>
+      <aside class="story-card">
+        <div class="big-icon">📘</div>
+        <h3>Education with understanding at its centre.</h3>
+        <p>We believe that learning becomes more manageable when students can discuss doubts, practise what they learn, and move through topics in clear steps.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section values" id="values">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">What guides us</span>
+        <h2>Our Mission & Values</h2>
+        <p>Our aim is to make B.Tech, MCA and BCA tuition useful, approachable, and focused on student learning.</p>
+      </div>
+      <div class="value-grid">
+        <article class="value-card"><div class="value-icon">🎯</div><h3>Our Mission</h3><p>To support engineering students with clear subject explanations, purposeful practice, and opportunities to work through doubts.</p></article>
+        <article class="value-card"><div class="value-icon">🌟</div><h3>Our Vision</h3><p>To create a positive learning environment where students can keep building knowledge and confidence throughout their B.Tech journey.</p></article>
+        <article class="value-card"><div class="value-icon">🤝</div><h3>Our Values</h3><p>Clarity, consistency, respect for each learner, and a willingness to ask questions and improve through practice.</p></article>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<script>
+function toggleMenu(){
+  const nav=document.getElementById('navLinks');
+  const button=document.querySelector('.menu-toggle');
+  const isOpen=nav.classList.toggle('open');
+  button.setAttribute('aria-expanded',String(isOpen));
+}
+function closeMenu(){
+  document.getElementById('navLinks').classList.remove('open');
+  document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
